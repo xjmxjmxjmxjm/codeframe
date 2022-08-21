@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\m1356\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\m1356\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_CodeFrame.974446002.00" t="ExcludeRecursive" />
+    <e p="E:\UnityEngine\CodeFrame" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="GameData" t="Include">
+          <e p="Data" t="Include">
+            <e p="Xml" t="Include">
+              <e p="MonsterData.xml" t="Include" />
+            </e>
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="FPX" t="Include">
+              <e p="benghuai" t="Include">
+                <e p="AutoRotation.cs" t="Include" />
+                <e p="cloud.shader" t="Include" />
+              </e>
+              <e p="benghuai.shader" t="Include" />
+              <e p="Skybox.shader" t="Include" />
+              <e p="Water.shader" t="Include" />
+              <e p="Xray.shader" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModuleEPOOutline.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="RealFram" t="Include">
+          <e p="Editor" t="Include">
+            <e p="Config" t="Include">
+              <e p="DataEditor.cs" t="Include" />
+            </e>
+            <e p="RealFramConfig.cs" t="Include" />
+            <e p="Resource" t="Include">
+              <e p="ABConfig.cs" t="Include" />
+              <e p="BuildApp.cs" t="Include" />
+              <e p="BundleEditor.cs" t="Include" />
+              <e p="OfflineDataEditor.cs" t="Include" />
+              <e p="WindowsFile.cs" t="Include" />
+            </e>
+          </e>
+          <e p="FramePlug" t="Include">
+            <e p="BaseFrame" t="Include">
+              <e p="AES.cs" t="Include" />
+              <e p="Base.asmdef" t="Include" />
+              <e p="MonoSingleton.cs" t="Include" />
+              <e p="Singleton.cs" t="Include" />
+            </e>
+            <e p="ConfigFrame" t="Include">
+              <e p="ConfigerManager.cs" t="Include" />
+              <e p="ExcelBase.cs" t="Include" />
+            </e>
+            <e p="GameStart.cs" t="Include" />
+            <e p="ResourceFrame" t="Include">
+              <e p="AssetBundleConfig.cs" t="Include" />
+              <e p="AssetBundleManager.cs" t="Include" />
+              <e p="BinarySerializeOpt.cs" t="Include" />
+              <e p="ClassObjectPool.cs" t="Include" />
+              <e p="CRC32.cs" t="Include" />
+              <e p="DownLoad" t="Include">
+                <e p="ABMD5.cs" t="Include" />
+                <e p="DownLoadAssetBundle.cs" t="Include" />
+                <e p="DownLoadItem.cs" t="Include" />
+                <e p="HotPatchManager.cs" t="Include" />
+                <e p="ServerInfo.cs" t="Include" />
+              </e>
+              <e p="GetMemory.cs" t="Include" />
+              <e p="MD5Manager.cs" t="Include" />
+              <e p="ObjectManager.cs" t="Include" />
+              <e p="OfflineData" t="Include">
+                <e p="EffectOfflineData.cs" t="Include" />
+                <e p="OfflineData.cs" t="Include" />
+                <e p="UIOfflineData.cs" t="Include" />
+              </e>
+              <e p="Resource.asmdef" t="Include" />
+              <e p="ResourceManager.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Version.txt" t="Include" />
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="ConfigData" t="Include">
+            <e p="MonsterData.cs" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="AutoGenerateFrameCode" t="Include">
+              <e p="CodeTemplate.cs" t="Include" />
+              <e p="GenerateCode.cs" t="Include" />
+              <e p="GeneratePanelUICode.cs" t="Include" />
+              <e p="PanelUIData.cs" t="Include" />
+              <e p="ScriptBuildHelp.cs" t="Include" />
+              <e p="ToolData.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Manager" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+            <e p="GameMapManager.cs" t="Include" />
+          </e>
+          <e p="Module" t="Include">
+            <e p="Debug" t="Include">
+              <e p="Log.cs" t="Include" />
+            </e>
+            <e p="Timer" t="Include">
+              <e p="Timer.cs" t="Include" />
+            </e>
+          </e>
+          <e p="UIFrame" t="Include">
+            <e p="Const" t="Include">
+              <e p="ColorDefine.cs" t="Include" />
+              <e p="EnumStr.cs" t="Include" />
+              <e p="SceneStr.cs" t="Include" />
+              <e p="UiId.cs" t="Include" />
+            </e>
+            <e p="Manager" t="Include">
+              <e p="CameraManager.cs" t="Include" />
+              <e p="UILayerManager.cs" t="Include" />
+              <e p="UIManager.cs" t="Include" />
+            </e>
+            <e p="Panel" t="Include">
+              <e p="BasicUI" t="Include">
+                <e p="LoadingPanel.cs" t="Include" />
+              </e>
+            </e>
+            <e p="UI" t="Include">
+              <e p="BasicUI" t="Include">
+                <e p="LoadingUI.cs" t="Include" />
+              </e>
+            </e>
+            <e p="UIBase" t="Include">
+              <e p="BaseItem.cs" t="Include" />
+              <e p="BasicUI.cs" t="Include" />
+              <e p="BottomUI.cs" t="Include" />
+              <e p="OverlayTopUI.cs" t="Include" />
+              <e p="OverlayUI.cs" t="Include" />
+              <e p="TipUI.cs" t="Include" />
+              <e p="TopUI.cs" t="Include" />
+              <e p="UIBase.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Util" t="Include">
+            <e p="ExtendUtil.cs" t="Include" />
+            <e p="ToolUtil.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Base.csproj" t="IncludeRecursive" />
+      <e p="CodeFrame.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Resource.csproj" t="IncludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="Bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MonsterData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AllMonster Id="0" Name="1" OutLook="2" Level="0" Rare="0" Height="0" Attack="1" />
+</MonsterData>

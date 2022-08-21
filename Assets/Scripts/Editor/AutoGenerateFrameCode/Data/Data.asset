@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 11500000, guid: 6e49edb0701bbfe4ca449ae5dc62398b, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  ViewPath: Assets/GameData/Prefabs/UGUI/Panel/LoadingPanel.prefab
+  ServicePath: Assets/Scripts/Game/Service
+  SystemPath: Assets/Scripts/Game/System
+  ServiceManagerPath: Assets/Scripts/Game/Service/ServiceManager.cs
+  GameFeaturePath: Assets/Scripts/Game/Feature/GameFeature.cs
+  InputFeaturePath: Assets/Scripts/Game/Feature/InputFeature.cs
+  ViewFeaturePath: Assets/Scripts/Game/Feature/ViewFeature.cs
+  PanelPath: Assets/Scripts/UIFrame/Panel/
+  UIPath: Assets/Scripts/UIFrame/UI/
+  Creater: xjm
