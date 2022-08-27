@@ -1,111 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f878d84-5e75-4cee-a89e-43a8206c338f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.CodeFrame/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeFrame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeFrame/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CodeFrame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CodeFrame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameData/Prefabs/UGUI/Panel/LoadingPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameData/Prefabs/UGUI/Panel/LoadingPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RealFram/FramePlug/GameStart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RealFram/FramePlug/GameStart.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RealFram/FramePlug/GameStart.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RealFram/FramePlug/GameStart.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/AutoGenerateFrameCode/CodeTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/AutoGenerateFrameCode/CodeTemplate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/AutoGenerateFrameCode/GenerateCode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/AutoGenerateFrameCode/GenerateCode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/AutoGenerateFrameCode/GeneratePanelUICode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/AutoGenerateFrameCode/GeneratePanelUICode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/AutoGenerateFrameCode/ScriptBuildHelp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/AutoGenerateFrameCode/ScriptBuildHelp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/AutoGenerateFrameCode/ToolData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/AutoGenerateFrameCode/ToolData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameMapManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameMapManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Module/Debug/Log.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Module/Debug/LogUtil.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Module/Debug/Log.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Module/Debug/LogUtil.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Const/EnumStr.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Const/EnumStr.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Const/UiId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Const/UiId.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Manager/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Manager/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Panel/BasicUI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Panel/BasicUI/LoadingPanel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Panel/BasicUI/LoadingPanel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Panel/BottomUI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Panel/Item.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Panel/OverlayTopUI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Panel/OverlayUI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Panel/TipUI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/Panel/TopUI.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UI/BasicUI/LoadingUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UI/BasicUI/LoadingUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UI/Item.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/BaseItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/BaseItem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/BasicUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/BasicUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/BottomUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/BottomUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/OverlayTopUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/OverlayTopUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/OverlayUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/OverlayUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/TipUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/TipUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/TopUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/TopUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/UIBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIFrame/UIBase/UIBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/ExtendUtil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/ExtendUtil.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/ToolUtil.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/StringUtil.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Util/ToolUtil.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Util/StringUtil.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/04/045a7e9347ea5f9a5cd6f45c47f40302" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/0a/0a239d8a36896cd10c4e2253a63da887" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/0c/0c037ba14742b177eeab15c00d43b86e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/0e/0e4b472ef55788b44c6a834c7cc3f954" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/2e/2ebb2b9653bdaf94d377a3837ff3fb60" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/34/34ab61e1e8dbfa344d81f92524b831e2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/38/38c8bddffe30a647e180319e32311903" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3c/3c628a9ea521e4a29c9ee114b5dd4dca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/43/437faa8f408415476f1fbcabb6f6903e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/45/457f73ddea8d42077147477928fa5d11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5c/5ca7baf9518106133ac348277f47ea14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/63/639f64a9630165025ecdbea94a0eef4d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/7e/7e153a88f29ccfc5f577df8f73003f31" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/80/800f685063f370131494e49542458324" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/8a/8a2ed2172a04b2a22971139237fa01c6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/93/934498acdcc52a9a97830377a24ea743" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/93/93ad633e37124c1cce1cfec2d46878e2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a2/a2666e7ac1285075276b2e420cc7ab92" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a3/a37644398bf5e455886ec66f4fa6c3c0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a6/a697a2c761c29dc61dc89404fe2fbd28" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/b2/b21d87b93310aed3a4dcfa0271dc74de" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/b6/b6f21ba8f76b82d2cb6dea2a9943f27b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/bb/bb3c0fbaa261cf84adfb56366a33479a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c8/c831113def3896cfad8900d0be526a38" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ca/caedb7d46d7b70c4ce6240e0d4586c7b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d1/d10c0e681c6478f10e83d51ae47cc2ca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d6/d67a9af764e3a3de147cc16b2d2581ae" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d7/d762bfd661d5251ac2e11a1332473071" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d8/d89ef09557d81b553b2c2be0ce4e6346" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d9/d97941f558538a3f6c040cf22729769a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e2/e248cde8d7f1efa0e6021aa13581e324" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e3/e38981e7492abdaa5e96456f9dbf9718" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/eb/eb31a6b59905b47193920a9d951b51a1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f8/f8a3ac29c1ca0b669feb125746922e06" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/fe/fed9c375b96955a753fd56c16dd8a702" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ShaderCache.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/a1/a1779d1a27eb3ea2fc3d1802a3222e46.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/a1/a1779d1a27eb3ea2fc3d1802a3222e46.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/PrefabStageHierarchy/d3/d3f40ad8f2c1dc3150184c998827f48b.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/PrefabStageHierarchy/d3/d3f40ad8f2c1dc3150184c998827f48b.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/72/720b9d14544b0fe6ca718c691d8deb60.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/72/720b9d14544b0fe6ca718c691d8deb60.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-    </list>
+    <list default="true" id="3f878d84-5e75-4cee-a89e-43a8206c338f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UITools/ScrollView/LoopList.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+            <state relative-caret-position="795">
+              <caret line="254" column="5" lean-forward="true" selection-start-line="254" selection-start-column="5" selection-end-line="254" selection-end-column="5" />
               <folding>
                 <marker date="1661620563289" expanded="true" signature="6:133" ph="..." />
                 <marker date="1661620563289" expanded="true" signature="172:11287" ph="{...}" />
@@ -544,7 +440,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="2958" />
     <option name="y" value="21" />
     <option name="width" value="1626" />
@@ -616,12 +512,12 @@
       <workItem from="1661347198118" duration="2498000" />
       <workItem from="1661349735856" duration="12248000" />
       <workItem from="1661432975511" duration="18370000" />
-      <workItem from="1661599180597" duration="20346000" />
+      <workItem from="1661599180597" duration="20587000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112000000" />
+    <option name="totallyTimeSpent" value="112241000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1341,8 +1237,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/UITools/ScrollView/LoopList.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="21" lean-forward="true" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        <state relative-caret-position="795">
+          <caret line="254" column="5" lean-forward="true" selection-start-line="254" selection-start-column="5" selection-end-line="254" selection-end-column="5" />
           <folding>
             <marker date="1661620563289" expanded="true" signature="6:133" ph="..." />
             <marker date="1661620563289" expanded="true" signature="172:11287" ph="{...}" />
