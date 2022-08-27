@@ -4,12 +4,12 @@
 /// </summary>
 public enum UILayer
 {
-    BASIC_UI,  
-    TOP_UI,
-    OVERLAYTOP_UI, 
-    BOTTOM_UI,
-    OVERLAY_UI, 
-    TIP_UI
+    BASIC_PANEL,  
+    TOP_PANEL,
+    OVERLAYTOP_PANEL, 
+    BOTTOM_PANEL,
+    OVERLAY_PANEL, 
+    TIP_PANEL
 }
 
 

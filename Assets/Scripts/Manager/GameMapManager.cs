@@ -38,7 +38,7 @@ public class GameMapManager : Singleton<GameMapManager> {
 
 		m_Mono.StartCoroutine(LoadSceneAsync(name));
 
-		UIManager.Instance.PopUpWnd(UiId.LoadingPanel, UILayer.OVERLAY_UI, false, name);
+		UIManager.Instance.PopUpWnd(UiId.LoadingPanel, false, name);
 	}
 
 	/// <summary>

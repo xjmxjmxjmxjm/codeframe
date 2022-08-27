@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 381880552}
   m_Layer: 5
-  m_Name: OVERLAY_UI
+  m_Name: OVERLAY_PANEL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ GameObject:
   m_Component:
   - component: {fileID: 809076824}
   m_Layer: 5
-  m_Name: TIP_UI
+  m_Name: TIP_PANEL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,7 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 952499492}
   m_Layer: 5
-  m_Name: TOP_UI
+  m_Name: TOP_PANEL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1491804469}
   m_Layer: 5
-  m_Name: BOTTOM_UI
+  m_Name: BOTTOM_PANEL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2117467182}
   m_Layer: 5
-  m_Name: BASIC_UI
+  m_Name: BASIC_PANEL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -903,7 +903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201452970246749903}
   m_Layer: 5
-  m_Name: OVERLAYTOP_UI
+  m_Name: OVERLAYTOP_PANEL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

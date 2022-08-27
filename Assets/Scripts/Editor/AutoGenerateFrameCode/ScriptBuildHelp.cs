@@ -67,7 +67,7 @@ namespace CustomTool{
             return indent;
         }
 
-        private int WriteCurlyBrackets()
+        public int WriteCurlyBrackets()
         {
             var start = _lineBrake + GetIndent() + "{" + _lineBrake;
             var end = GetIndent() + "}" + _lineBrake;

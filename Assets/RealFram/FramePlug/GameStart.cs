@@ -24,7 +24,7 @@ public class GameStart : MonoSingleton<GameStart>
 		UIManager.Instance.Init(uiRoot, wndRoot, uiCamera, eventSystem);
 		CameraManager.Instance.Init(uiCamera);
 		
-		UIManager.Instance.PopUpWnd(UiId.LoadingPanel, UILayer.OVERLAY_UI, false, "Awake");
+		UIManager.Instance.PopUpWnd(UiId.LoadingPanel, false, "Awake");
 		
 	}
 

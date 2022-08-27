@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using Util;
 
 namespace CustomTool
 {
@@ -15,6 +16,7 @@ namespace CustomTool
             build.WriteEmptyLine();
             build.WriteUsing("UnityEngine");
             build.WriteUsing("UnityEngine.UI");
+            build.WriteUsing("Util");
             build.WriteUsing("UnityEngine.UIElements");
             build.WriteUsing("Button = UnityEngine.UI.Button");
             build.WriteUsing("Image = UnityEngine.UI.Image");
@@ -34,7 +36,6 @@ namespace CustomTool
 
         private static void GetProString(string componentName, ScriptBuildHelp build)
         {
-            LogUtil.Log(componentName);
             string[] splitTemp = componentName.Split('/');
             string[] temp = splitTemp[splitTemp.Length - 1].Split('_');
             string com = temp[0];
@@ -60,13 +61,86 @@ namespace CustomTool
             build.IndentTimes--;
             build.IndentTimes--;
             build.ToContentEnd();
+
+            if (com == "scrov")
+            {
+                build.IndentTimes++;
+                build.WriteLine("private Transform" + " _Trans" + name + ";", true);
+                build.WritePro("public Transform" + " Trans" + name, true);
+                build.IndentTimes++;
+                build.WriteGet(true);
+                build.IndentTimes++;
+                build.WriteProContext("if (" + "_Trans" + name + " == null)", true);
+                build.IndentTimes++;
+                build.WriteLine("_Trans" + name + " = transform.Find(\"" + componentName + "\");", true);
+                build.IndentTimes--;
+                build.ToContentEnd();
+                build.WriteLine("return " + "_Trans" + name + ";", true);
+                build.ToContentEnd();
+                build.IndentTimes--;
+                build.IndentTimes--;
+                build.IndentTimes--;
+                build.ToContentEnd();
+                
+                build.IndentTimes++;
+                build.WriteLine("private LoopList" + " _LoopList" + name + ";", true);
+                build.WritePro("public LoopList" + " LoopList" + name, true);
+                build.IndentTimes++;
+                build.WriteGet(true);
+                build.IndentTimes++;
+                build.WriteProContext("if (" + "_LoopList" + name + " == null)", true);
+                build.IndentTimes++;
+                build.WriteLine("_LoopList" + name + " = transform.Find(\"" + componentName + "\").GetOrAddComponent<LoopList>();", true);
+                build.IndentTimes--;
+                build.ToContentEnd();
+                build.WriteLine("return " + "_LoopList" + name + ";", true);
+                build.ToContentEnd();
+                build.IndentTimes--;
+                build.IndentTimes--;
+                build.IndentTimes--;
+                build.ToContentEnd();
+            }
         }
 
-        public static string GetUICode()
+
+        public static string GetUICode(FileName contextName, string className)
         {
             var build = new ScriptBuildHelp();
+            build.WriteLine("// Creater : " + ToolData._creater);
+            build.WriteEmptyLine();
+            build.WriteEmptyLine();
+            build.WriteUsing("System");
+            build.WriteUsing("System.Collections.Generic");
+            build.WriteEmptyLine();
+            build.WriteEmptyLine();
+            build.WriteClass(className, ToolData.GetUILayerBaseName(contextName));
+            build.IndentTimes++;
             
             
+            List<string> keys = new List<string>();
+            keys.Add("override");
+            if (contextName == FileName.ItemPanel)
+            {
+                keys.Add("ItemId");
+                build.WriteFun("GetItemId", ScriptBuildHelp.Public, keys);
+            }
+            else
+            {
+                keys.Add("UiId");
+                build.WriteFun("GetUiId", ScriptBuildHelp.Public, keys);
+            }
+            build.Back2InsertContent();
+            
+            
+            build.IndentTimes++;
+            if (contextName == FileName.ItemPanel)
+            {
+                build.WriteLine("return ItemId." + className.Replace("UI", "") + ";", true);
+            }
+            else
+            {
+                build.WriteLine("return UiId." + className.Replace("UI", "Panel") + ";", true);
+            }
             
             return build.ToString();
         }

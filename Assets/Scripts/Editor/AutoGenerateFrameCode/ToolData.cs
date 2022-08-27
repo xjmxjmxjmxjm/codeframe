@@ -116,7 +116,7 @@ namespace CustomTool
             ReadDataFromLocal();
             InitContextSelectState();
             _selectdContextName = _contextNames[0];
-
+                
             InitSystemSelectState();
             
             
@@ -148,6 +148,8 @@ namespace CustomTool
             }
         }
         
+        
+        
         /// <summary>
         /// 获取所有上下文名称
         /// </summary>
@@ -156,15 +158,42 @@ namespace CustomTool
             
             string[] layer = new string[]
             {
-                "BasicUI",
-                "TopUI",
-                "OverlayTopUI",
-                "BottomUI",
-                "OverlayUI",
-                "TipUI",
+                FileName.BasicPanel.ToString(),
+                FileName.TopPanel.ToString(),
+                FileName.OverlayTopPanel.ToString(),
+                FileName.BottomPanel.ToString(),
+                FileName.OverlayPanel.ToString(),
+                FileName.TipPanel.ToString(),
+                
+                FileName.ItemPanel.ToString(),
             };
             _contextNames = layer.ToArray();
         }
+
+        public static string GetUILayerBaseName(FileName name)
+        {
+            switch (name)
+            {
+                case FileName.BasicPanel:
+                    return "BasicUI"; 
+                case FileName.TopPanel:
+                    return "TopUI";
+                case FileName.OverlayTopPanel:
+                    return "OverlayTopUI";
+                case FileName.BottomPanel:
+                    return "BottomUI";
+                case FileName.OverlayPanel:
+                    return "OverlayUI";
+                case FileName.TipPanel:
+                    return "TipUI";
+                
+                case FileName.ItemPanel:
+                    return "ItemBase";
+            }
+
+            return string.Empty;
+        }
+        
 
         /// <summary>
         /// 传入开发者自己编写的定义的 ui组件名字  来获取unity组件名
@@ -242,5 +271,17 @@ namespace CustomTool
         }
         
         
+    }
+
+    public enum FileName
+    {
+        NONE,
+        BasicPanel,
+        TopPanel,
+        OverlayTopPanel,
+        BottomPanel,
+        OverlayPanel,
+        TipPanel,
+        ItemPanel,
     }
 }

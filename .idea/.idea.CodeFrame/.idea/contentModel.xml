@@ -8,6 +8,14 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Editor" t="Include">
+          <e p="AssetPost" t="Include">
+            <e p="AssetPostManager.cs" t="Include" />
+          </e>
+          <e p="UITools" t="Include">
+            <e p="CircleImageEditor.cs" t="Include" />
+          </e>
+        </e>
         <e p="GameData" t="Include">
           <e p="Data" t="Include">
             <e p="Xml" t="Include">
@@ -119,7 +127,7 @@
           </e>
           <e p="Module" t="Include">
             <e p="Debug" t="Include">
-              <e p="Log.cs" t="Include" />
+              <e p="LogUtil.cs" t="Include" />
             </e>
             <e p="Timer" t="Include">
               <e p="Timer.cs" t="Include" />
@@ -138,29 +146,50 @@
               <e p="UIManager.cs" t="Include" />
             </e>
             <e p="Panel" t="Include">
-              <e p="BasicUI" t="Include">
+              <e p="BasicPanel" t="Include">
                 <e p="LoadingPanel.cs" t="Include" />
+              </e>
+              <e p="ItemPanel" t="Include">
+                <e p="FruitItem.cs" t="Include" />
               </e>
             </e>
             <e p="UI" t="Include">
               <e p="BasicUI" t="Include">
                 <e p="LoadingUI.cs" t="Include" />
               </e>
+              <e p="ItemUI" t="Include">
+                <e p="FruitItemUI.cs" t="Include" />
+              </e>
             </e>
             <e p="UIBase" t="Include">
-              <e p="BaseItem.cs" t="Include" />
-              <e p="BasicUI.cs" t="Include" />
-              <e p="BottomUI.cs" t="Include" />
-              <e p="OverlayTopUI.cs" t="Include" />
-              <e p="OverlayUI.cs" t="Include" />
-              <e p="TipUI.cs" t="Include" />
-              <e p="TopUI.cs" t="Include" />
-              <e p="UIBase.cs" t="Include" />
+              <e p="UIItem" t="Include">
+                <e p="ItemBase.cs" t="Include" />
+              </e>
+              <e p="UIPanel" t="Include">
+                <e p="BasicUI.cs" t="Include" />
+                <e p="BottomUI.cs" t="Include" />
+                <e p="OverlayTopUI.cs" t="Include" />
+                <e p="OverlayUI.cs" t="Include" />
+                <e p="PanelBase.cs" t="Include" />
+                <e p="TipUI.cs" t="Include" />
+                <e p="TopUI.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="UITools" t="Include">
+            <e p="Mask" t="Include">
+              <e p="CircleImage.cs" t="Include" />
+            </e>
+            <e p="ScrollView" t="Include">
+              <e p="LoopList.cs" t="Include" />
+              <e p="LoopListItem.cs" t="Include" />
+              <e p="LoopListItemModel.cs" t="Include" />
             </e>
           </e>
           <e p="Util" t="Include">
             <e p="ExtendUtil.cs" t="Include" />
-            <e p="ToolUtil.cs" t="Include" />
+            <e p="ReflectUtil.cs" t="Include" />
+            <e p="StringUtil.cs" t="Include" />
           </e>
         </e>
       </e>

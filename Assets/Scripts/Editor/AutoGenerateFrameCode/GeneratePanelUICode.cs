@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Util;
 
 namespace CustomTool
 {
@@ -22,7 +23,7 @@ namespace CustomTool
         public static void OpenWindow()
         {
             window = GetWindow(typeof(GeneratePanelUICode));
-            window.minSize = new Vector2(600, 600);
+            window.minSize = new Vector2(800, 600);
             window.Show();
             Init();
         }
@@ -57,12 +58,14 @@ namespace CustomTool
         private void OnGUI()
         {
             GUILayout.Space(_lineSpace);
-            GUILayout.Label("生成 PanelUI 框架代码工具", _mainTitle);
+            GUILayout.Label("代码生成工具", _mainTitle);
 
            
             Path();
             SelectContext();
+
             Panel();
+            CreateUI();
         }
         
         private void Path()
@@ -76,7 +79,11 @@ namespace CustomTool
             GetCreater();
             GetPrefabName();
           
-            CreateButton("保存路径", ToolData.SaveData2Local);
+
+            CreateButton("保存路径", () =>
+            {
+                ToolData.SaveData2Local();
+            });
         }
 
 
@@ -88,9 +95,80 @@ namespace CustomTool
 
         private void GetPrefabName()
         {
-            string[] temp = ToolData._viewPath.Split('/');
-            ToolData._prefabName = temp[temp.Length - 1].Replace(".prefab", "");
-            ToolData._UIName = ToolData._prefabName.Replace("Panel","UI");
+            if (string.IsNullOrEmpty(ToolData._viewPath)) return;
+            string[] temp = ToolData._viewPath.Split('/');  //分割预制体路径
+            ToolData._prefabName = temp[temp.Length - 1].Replace(".prefab", ""); //将结尾的 .prefab 去掉
+//            Type type = ToolUtil.GetType(ToolData._UIName);
+//            if (System.Activator.CreateInstance(type) is PanelBase)
+//            {
+//                PanelBase panel = System.Activator.CreateInstance(type) as PanelBase;
+//                Debug.Log(ToolData.GetContextNameByEnum(panel.GetUiLayer()));
+//            }
+//            else
+//            {
+//                ItemBase panel = System.Activator.CreateInstance(type) as ItemBase;
+//                Debug.Log("ItemUI");
+//            }
+        }
+
+        private void CreateUI()
+        {
+            GUILayout.Space(_lineSpace);
+            GUILayout.Label("UI层代码生成", _itemTitle);
+
+            CreateButton("生成UI逻辑脚本", () =>
+            {
+                if (IsSureContent() == false) return;
+                
+                //ToolData._UIName = ToolData._prefabName.Replace("Panel","UI"); 
+                int length = ToolData._prefabName.Length;
+                string last = ToolData._prefabName.Substring(length - 4);
+                if (last == "Item")
+                {
+                    ToolData._UIName = ToolData._prefabName + "UI";
+                }
+                else
+                {
+                    //panel 类脚本
+                    ToolData._UIName = ToolData._prefabName.Replace("Panel","UI"); 
+                }
+                
+                
+                if (ReflectUtil.GetType(ToolData._UIName) != null)
+                {
+                    Debug.LogError("将要生成的逻辑脚本 <" + ToolData._UIName + "> 已存在 如果是第一次生成此脚本 请修改你的预制体名称  并且重新生成你的 mono 类");
+                }
+                else
+                {
+
+                    FileName fileName = FileName.NONE;
+                    bool isChange = true;
+                    try
+                    {
+                        fileName = (FileName)Enum.Parse(typeof(FileName), ToolData._selectdContextName);
+                    }
+                    catch (Exception e)
+                    {
+                        isChange = false;
+                        throw;
+                    }
+                    finally
+                    {
+                        
+                    }
+
+                    if (isChange == false)
+                    {
+                        Debug.LogError("ui 逻辑类 生成时 枚举转换失败   未生成代码");
+                        return;
+                    }
+                    
+                    GenerateCode.CreateScripts(
+                        ToolData._uiPath + ToolData._selectdContextName.Replace("Panel", "UI") + "/", ToolData._UIName,
+                        CodeTemplate.GetUICode(fileName, ToolData._UIName));
+                }
+                
+            });
         }
 
         private void Panel()
@@ -98,15 +176,68 @@ namespace CustomTool
             GUILayout.Space(_lineSpace);
             GUILayout.Label("Panel层代码生成", _itemTitle);
             //InputName("代码名称", ref ToolData._viewName);
+
+           
             
-            CreateButton("生成Panel/UI脚本", () =>
+            CreateButton("生成Panel脚本", () =>
             {
+
+
+                if (IsSureContent() == false) return;
+                
+                
                 List<string> lst = GetPrefabAllNeedNode();
                 
-                GenerateCode.CreateScripts(ToolData._panelPath + ToolData._selectdContextName + "/", ToolData._prefabName, CodeTemplate.GetPanelCode(lst)); 
-                //GenerateCode.CreateScripts(ToolData._uiPath + ToolData._selectdContextName + "/", ToolData._UIName, CodeTemplate.GetUICode());
+                GenerateCode.CreateScripts(ToolData._panelPath + ToolData._selectdContextName + "/", ToolData._prefabName, CodeTemplate.GetPanelCode(lst));
+                if (ToolData._selectdContextName == FileName.ItemPanel.ToString())
+                {
+                    GenerateCode.InitId("//#create item#");
+                }
+                else
+                {
+                    GenerateCode.InitId("//#create panel#");
+                }
+
+   
+
+
+                
+                AssetDatabase.Refresh();
             });
         }
+
+
+        /// <summary>
+        /// 判断上下文是否选择正确
+        /// </summary>
+        /// <returns></returns>
+        private bool IsSureContent()
+        {
+            int length = ToolData._prefabName.Length;
+            string last = string.Empty;
+            //如果选择的是 item文件夹 的上下文
+            if (ToolData._selectdContextName == FileName.ItemPanel.ToString())
+            {
+                last = ToolData._prefabName.Substring(length - 5);
+                if (last == "Panel")
+                {
+                    Debug.LogError("上下文选择错误  没有生成代码");
+                    return false;
+                }
+            }
+            else
+            {
+                last = ToolData._prefabName.Substring(length - 4);
+                if (last == "Item")
+                {
+                    Debug.LogError("上下文选择错误  没有生成代码  当前应该选择 ItemPanel 上下文");
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        
 
         private List<string> GetPrefabAllNeedNode()
         {

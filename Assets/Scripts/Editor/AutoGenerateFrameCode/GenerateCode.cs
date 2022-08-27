@@ -7,16 +7,23 @@ namespace CustomTool
 {
     public class GenerateCode
     {
-        public static void InitServices(string path)
+        public static void InitId(string unique)
         {
+            string path = "Assets/Scripts/UIFrame/Const/UiId.cs";
             if (File.Exists(path))
             {
                 string context = File.ReadAllText(path);
-                string unique = "//[initservice unique]//";
                 int index = context.IndexOf(unique);
                 //int newindex = context.IndexOf("new", index);
-                context = context.Insert(index + unique.Length, "\n                new " + ToolData._serviceName + ToolData._servicePostfix + "(), ");
-                File.WriteAllText(path, context, Encoding.UTF8);
+                if (context.Contains(ToolData._prefabName))
+                {
+                    Debug.LogError("find repeat Enum Name:" + ToolData._prefabName);
+                }
+                else
+                {
+                    context = context.Insert(index + unique.Length, "\n    " + ToolData._prefabName + ",");
+                    File.WriteAllText(path, context, Encoding.UTF8);
+                }
             }
             else
             {

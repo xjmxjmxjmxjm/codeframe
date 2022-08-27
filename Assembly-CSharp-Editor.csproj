@@ -52,12 +52,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Editor\AssetPost\AssetPostManager.cs" />
     <Compile Include="Assets\RealFram\Editor\RealFramConfig.cs" />
     <Compile Include="Assets\Scripts\Editor\AutoGenerateFrameCode\CodeTemplate.cs" />
     <Compile Include="Assets\Scripts\Editor\AutoGenerateFrameCode\PanelUIData.cs" />
     <Compile Include="Assets\RealFram\Editor\Resource\BuildApp.cs" />
     <Compile Include="Assets\Scripts\Editor\AutoGenerateFrameCode\ToolData.cs" />
     <Compile Include="Assets\RealFram\Editor\Resource\BundleEditor.cs" />
+    <Compile Include="Assets\Editor\UITools\CircleImageEditor.cs" />
     <Compile Include="Assets\RealFram\Editor\Resource\ABConfig.cs" />
     <Compile Include="Assets\Scripts\Editor\AutoGenerateFrameCode\ScriptBuildHelp.cs" />
     <Compile Include="Assets\RealFram\Editor\Resource\WindowsFile.cs" />
