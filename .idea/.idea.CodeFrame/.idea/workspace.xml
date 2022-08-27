@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f878d84-5e75-4cee-a89e-43a8206c338f" name="Default Changelist" comment="" />
+    <list default="true" id="3f878d84-5e75-4cee-a89e-43a8206c338f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/a1/a1779d1a27eb3ea2fc3d1802a3222e46.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/a1/a1779d1a27eb3ea2fc3d1802a3222e46.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +17,7 @@
     <session id="-1066951571">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="5" />
           <entry key="project.open.time.6" value="2" />
@@ -46,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/UITools/ScrollView/LoopList.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="254" column="5" lean-forward="true" selection-start-line="254" selection-start-column="5" selection-end-line="254" selection-end-column="5" />
+            <state relative-caret-position="90">
+              <caret line="204" column="37" lean-forward="true" selection-start-line="204" selection-start-column="37" selection-end-line="204" selection-end-column="37" />
               <folding>
                 <marker date="1661620563289" expanded="true" signature="6:133" ph="..." />
                 <marker date="1661620563289" expanded="true" signature="172:11287" ph="{...}" />
@@ -441,8 +446,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2958" />
-    <option name="y" value="21" />
+    <option name="x" value="2835" />
+    <option name="y" value="24" />
     <option name="width" value="1626" />
     <option name="height" value="1018" />
   </component>
@@ -512,12 +517,12 @@
       <workItem from="1661347198118" duration="2498000" />
       <workItem from="1661349735856" duration="12248000" />
       <workItem from="1661432975511" duration="18370000" />
-      <workItem from="1661599180597" duration="20587000" />
+      <workItem from="1661599180597" duration="21282000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112241000" />
+    <option name="totallyTimeSpent" value="112936000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -529,8 +534,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2958" y="21" width="1626" height="1018" extended-state="0" />
-    <editor active="true" />
+    <frame x="2835" y="24" width="1626" height="1018" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24968071" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1237,8 +1241,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/UITools/ScrollView/LoopList.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="254" column="5" lean-forward="true" selection-start-line="254" selection-start-column="5" selection-end-line="254" selection-end-column="5" />
+        <state relative-caret-position="90">
+          <caret line="204" column="37" lean-forward="true" selection-start-line="204" selection-start-column="37" selection-end-line="204" selection-end-column="37" />
           <folding>
             <marker date="1661620563289" expanded="true" signature="6:133" ph="..." />
             <marker date="1661620563289" expanded="true" signature="172:11287" ph="{...}" />
