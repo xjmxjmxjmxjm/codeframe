@@ -12,7 +12,11 @@
           <e p="AssetPost" t="Include">
             <e p="AssetPostManager.cs" t="Include" />
           </e>
+          <e p="Language" t="Include">
+            <e p="ReadLanguage.cs" t="Include" />
+          </e>
           <e p="UITools" t="Include">
+            <e p="AutoAddLanguageItem.cs" t="Include" />
             <e p="CircleImageEditor.cs" t="Include" />
           </e>
         </e>
@@ -62,6 +66,7 @@
               <e p="ABConfig.cs" t="Include" />
               <e p="BuildApp.cs" t="Include" />
               <e p="BundleEditor.cs" t="Include" />
+              <e p="BundleHotFix.cs" t="Include" />
               <e p="OfflineDataEditor.cs" t="Include" />
               <e p="WindowsFile.cs" t="Include" />
             </e>
@@ -105,7 +110,7 @@
           </e>
         </e>
         <e p="Resources" t="Include">
-          <e p="Version.txt" t="Include" />
+          <e p="ABMD5.xml" t="Include" />
         </e>
         <e p="Scripts" t="Include">
           <e p="ConfigData" t="Include">
@@ -145,6 +150,30 @@
               <e p="UILayerManager.cs" t="Include" />
               <e p="UIManager.cs" t="Include" />
             </e>
+            <e p="Net" t="Include">
+              <e p="ByteArray.cs" t="Include" />
+              <e p="GlobalDataManager.cs" t="Include" />
+              <e p="NetManager.cs" t="Include" />
+              <e p="Proto" t="Include">
+                <e p="MsgBase" t="Include">
+                  <e p="MsgBase.cs" t="Include" />
+                </e>
+              </e>
+              <e p="ProtocolEnum.cs" t="Include" />
+              <e p="ProtocolManager.cs" t="Include" />
+              <e p="SendAndRequest" t="Include">
+                <e p="HeartMsgData" t="Include">
+                  <e p="HeartMsg.cs" t="Include" />
+                </e>
+                <e p="Login" t="Include">
+                  <e p="LoginHandler.cs" t="Include" />
+                </e>
+                <e p="Serect" t="Include">
+                  <e p="SerectHandler.cs" t="Include" />
+                </e>
+              </e>
+              <e p="ServerEnum.cs" t="Include" />
+            </e>
             <e p="Panel" t="Include">
               <e p="BasicPanel" t="Include">
                 <e p="LoadingPanel.cs" t="Include" />
@@ -159,6 +188,9 @@
               </e>
               <e p="ItemUI" t="Include">
                 <e p="FruitItemUI.cs" t="Include" />
+              </e>
+              <e p="TipUI" t="Include">
+                <e p="HotFixUI.cs" t="Include" />
               </e>
             </e>
             <e p="UIBase" t="Include">
@@ -177,6 +209,11 @@
             </e>
           </e>
           <e p="UITools" t="Include">
+            <e p="Language" t="Include">
+              <e p="Data.cs" t="Include" />
+              <e p="LanguageItem.cs" t="Include" />
+              <e p="MultiLanguageSystem.cs" t="Include" />
+            </e>
             <e p="Mask" t="Include">
               <e p="CircleImage.cs" t="Include" />
             </e>

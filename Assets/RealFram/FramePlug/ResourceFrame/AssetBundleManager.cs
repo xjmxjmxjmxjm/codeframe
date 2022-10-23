@@ -39,7 +39,7 @@ public class AssetBundleManager : Singleton<AssetBundleManager>
 #if UNITY_ANDROID
 		get { return Application.persistentDataPath + "/Origin/"; } 
 #else
-		get { return Application.streamingAssetsPath + "/"; } 
+		get { return Application.streamingAssetsPath + "/AB/"; } 
 #endif
 	}
 	
@@ -119,7 +119,6 @@ public class AssetBundleManager : Singleton<AssetBundleManager>
 			return item;
 		}*/
 
-		item.m_AssetBundle = LoadAssetBundle(item.m_ABName);
 
 		if (item.m_DependceAssetBundle != null)
 		{
@@ -129,6 +128,8 @@ public class AssetBundleManager : Singleton<AssetBundleManager>
 			}
 		}
 
+		item.m_AssetBundle = LoadAssetBundle(item.m_ABName);
+		
 		return item;
 	}
 

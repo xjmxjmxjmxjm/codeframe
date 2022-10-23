@@ -31,7 +31,6 @@ public class LoadingUI : BasicUI
 
 
         m_loadingPanel.LoopListsc.Init(list, ItemId.FruitItem ,5);
-        m_loadingPanel.LoopListsc.MoveToModelIndex(0);
         
         AddButtonClickListener(m_loadingPanel.zero, () =>
         {
@@ -92,6 +91,10 @@ public class LoadingUI : BasicUI
                 lists.Add(mode);
             }
             m_loadingPanel.LoopListsc.UpdateModelsData(lists);
+        });
+        AddButtonClickListener(m_loadingPanel.move, () =>
+        {
+            m_loadingPanel.LoopListsc.MoveToModelIndex(60);
         });
         
     }

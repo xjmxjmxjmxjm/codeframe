@@ -1,8 +1,14 @@
 ﻿using System;
 using System.Collections;
+using System.IO;
+using System.Net.Sockets;
+using System.Text;
+using Module.Timer;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Networking;
 using UnityEngine.UI;
+using Util;
 
 public class GameStart : MonoSingleton<GameStart>
 {
@@ -10,6 +16,8 @@ public class GameStart : MonoSingleton<GameStart>
 	{
 		base.Awake();
 		DontDestroyOnLoad(gameObject);
+
+		StartLogMessage();
 		
 		ResourceManager.Instance.Init(this);
 		
@@ -24,9 +32,33 @@ public class GameStart : MonoSingleton<GameStart>
 		UIManager.Instance.Init(uiRoot, wndRoot, uiCamera, eventSystem);
 		CameraManager.Instance.Init(uiCamera);
 		
-		UIManager.Instance.PopUpWnd(UiId.LoadingPanel, false, "Awake");
-		
+		//UIManager.Instance.PopUpWnd(UiId.LoadingPanel, false, "Awake");
+
+
+		//NetManager.Instance.Connect("127.0.0.1", 8888);
+		//StartCoroutine(NetManager.Instance.CheckNet());
+
+		//AssetBundleManager.Instance.LoadAssetBundleConfig();
+
+		//ObjectManager.Instance.InstantiateObject("Assets/GameData/Prefabs/FPX/Attack.prefab", true);
+//
+//		GameObject go = new GameObject();
+//		Destroy(go);
+//		go = null;
+//		LogUtil.Log(go.name);
 	}
+
+	private void StartLogMessage()
+	{
+		Application.logMessageReceived += OnLogCallBack;
+	}
+
+	private void OnLogCallBack(string condition, string stackTrace, LogType type)
+	{
+		LogUtil.WriteLogPath(condition, stackTrace, type);
+	}
+	
+	
 
 	private void Start()
 	{
@@ -77,7 +109,52 @@ public class GameStart : MonoSingleton<GameStart>
 	private void Update()
 	{
 		UIManager.Instance.OnUpdate();
+		NetManager.Instance.Update();
 	}
+
+
+	public void UpLoadLog(string pathFileName, string str)
+	{
+		StartCoroutine(HttpPost("http://192.168.1.9:8888", pathFileName, Encoding.UTF8.GetBytes(str)));
+	}
+	
+	IEnumerator HttpPost(string url, string fileName, byte[] data)
+	{
+		WWWForm form = new WWWForm();
+        
+
+		form.AddBinaryData(fileName, data);
+		form.AddField("name", fileName, Encoding.UTF8);
+		form.AddField("type", 2);
+		
+		UnityWebRequest request = UnityWebRequest.Post(url, form);
+		var result = request.SendWebRequest();
+		while (!result.isDone)
+		{
+			yield return null;
+		}
+
+		if (!string.IsNullOrEmpty(request.error))
+		{
+			LogUtil.LogError("up error:" + request.error);
+		}
+		else
+		{
+			LogUtil.Log("日志上传完毕，服务器返回信息：" + request.downloadHandler.text);
+		}
+        
+		request.Dispose();
+	}
+
+	void SendCallBack(IAsyncResult ar)
+	{
+		Socket socket = (Socket)ar.AsyncState;
+		if (socket == null || !socket.Connected) return;
+		int count = socket.EndSend(ar);
+		Debug.Log(count);
+	}
+	
+	
 
 //	public static void OpenCommonConfirm(string title, string des, UnityAction sureAction, UnityAction canleAction)
 //	{

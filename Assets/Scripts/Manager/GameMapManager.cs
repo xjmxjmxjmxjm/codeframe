@@ -21,11 +21,14 @@ public class GameMapManager : Singleton<GameMapManager> {
 	public static int LoadingProgress = 0;
 
 
+	private WaitForEndOfFrame _waitEndOfFrame;
+
 
 	private MonoBehaviour m_Mono;
 	public void Init(MonoBehaviour mono)
 	{
 		m_Mono = mono;
+		_waitEndOfFrame = new WaitForEndOfFrame();
 	}
 	
 	/// <summary>
@@ -62,7 +65,7 @@ public class GameMapManager : Singleton<GameMapManager> {
 		AsyncOperation unLoadScene = SceneManager.LoadSceneAsync(SceneStr.EMPTYSCENE, LoadSceneMode.Single);
 		while (unLoadScene != null && !unLoadScene.isDone) 
 		{
-			yield return new WaitForEndOfFrame();
+			yield return _waitEndOfFrame;
 		}
 
 		LoadingProgress = 0;
@@ -74,12 +77,12 @@ public class GameMapManager : Singleton<GameMapManager> {
 			while (asyncScene.progress < 0.9f)
 			{
 				targetProgress = (int) (asyncScene.progress * 100);
-				yield return new WaitForEndOfFrame();
+				yield return _waitEndOfFrame;
 				//平滑过渡
 				while (LoadingProgress < targetProgress)
 				{
 					++LoadingProgress;
-					yield return new WaitForEndOfFrame();
+					yield return _waitEndOfFrame;
 				}
 			}
 
@@ -90,7 +93,7 @@ public class GameMapManager : Singleton<GameMapManager> {
 			while (LoadingProgress < targetProgress - 1)
 			{
 				++LoadingProgress;
-				yield return new WaitForEndOfFrame();
+				yield return _waitEndOfFrame;
 			}
 
 			LoadingProgress = 100;

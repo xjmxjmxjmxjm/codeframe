@@ -72,8 +72,17 @@ public class BundleEditor
 	[MenuItem("Tools/打包")]
 	public static void NormalBuild()
 	{
+		
+		string targetPath = m_VersionMD5Path + "/ABMD5_" + PlayerSettings.bundleVersion + ".bytes";
+		if (File.Exists(targetPath))
+		{
+			LogUtil.LogError("已经打过底包 是否需要打热更包 如果还是要打底包请删除<" + targetPath + ">文件");
+			return;
+		}
+		
 		Build();
 	}
+	
 
 	public static void Build(bool hotfix = false, string abmd5Path = "", string hotCount = "1")
 	{
@@ -189,6 +198,7 @@ public class BundleEditor
 
 		string ABMD5Path = Application.dataPath + "/Resources/ABMD5.bytes";
 		BinarySerializeOpt.BinarySerialize(ABMD5Path, abmd5);
+		BinarySerializeOpt.Xmlserialize(Application.dataPath + "/Resources/ABMD5.xml", abmd5);
 		//将打版的版本拷贝到外部进行存储
 		if (!Directory.Exists(m_VersionMD5Path))
 		{
@@ -196,10 +206,10 @@ public class BundleEditor
 		}
 
 		string targetPath = m_VersionMD5Path + "/ABMD5_" + PlayerSettings.bundleVersion + ".bytes";
-		if (File.Exists(targetPath))
-		{
-			File.Delete(targetPath);
-		}
+//		if (File.Exists(targetPath))
+//		{
+//			File.Delete(targetPath);
+//		}
 
 		File.Copy(ABMD5Path, targetPath);
 	}
@@ -279,7 +289,7 @@ public class BundleEditor
 		{
 			Patch patch = new Patch();
 			patch.Md5 = MD5Manager.Instance.BuildFileMd5(files[i].FullName);
-			Debug.Log(files[i].FullName);
+			//Debug.Log(files[i].FullName);
 			patch.Name = files[i].Name;
 			patch.Size = files[i].Length / 1024.0f;
 			patch.Platform = EditorUserBuildSettings.activeBuildTarget.ToString();
@@ -362,7 +372,7 @@ public class BundleEditor
 		}
 
 		DeleteManifest();
-		EncryptAB();
+		//EncryptAB();
 	}
 
 	static void DeleteManifest()
@@ -424,7 +434,7 @@ public class BundleEditor
 		StreamWriter xmlsw = null;
 		try
 		{
-			string xmlPath = Application.dataPath + "/AssetBundleConfig.xml";
+			string xmlPath = Application.dataPath + "/../AssetBundle/AssetBundleConfig.xml";
 			if (File.Exists(xmlPath)) File.Delete(xmlPath);
 			xmlfs = new FileStream(xmlPath, FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 			xmlsw = new StreamWriter(xmlfs, Encoding.UTF8);
@@ -554,7 +564,7 @@ public class BundleEditor
 		for (int i = 0; i < length; i++)
 		{
 			string validPath = m_oValidFilePath[i];
-			if (path.Contains(m_oValidFilePath[i])) return true;
+			if (path.Contains(validPath)) return true;
 		}
 
 		return false;

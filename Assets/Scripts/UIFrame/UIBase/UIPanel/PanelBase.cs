@@ -20,7 +20,7 @@ public abstract class PanelBase
 	public bool Resource { get; set; } = false;
 
 	public bool IsHotFix { get; set; } = false;
-
+	
 	//public string HotFixClassName { get; set; } = string.Empty;
 	
 	//所有的 button

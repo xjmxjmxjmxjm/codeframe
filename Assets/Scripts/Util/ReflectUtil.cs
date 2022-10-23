@@ -42,7 +42,6 @@ public class ReflectUtil
     }
     
     
-    
     public static Type GetTypeInGame(string name)
     {
         if (Application.isPlaying && false)
@@ -60,6 +59,7 @@ public class ReflectUtil
             {
                 _Assembly = Assembly.Load("Assembly-CSharp");
             }
+            
             Type type = _Assembly.GetType(name);
             if (type == null)
             {

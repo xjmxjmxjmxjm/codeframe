@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 0f02543ab2506b04a8a182a97cb51923, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -130,9 +130,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1192037893296388, guid: ab39acf2556c25942bd849fa2c3f8cbb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1235986970089326, guid: ab39acf2556c25942bd849fa2c3f8cbb, type: 3}
       propertyPath: m_Name
       value: GameStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235986970089326, guid: ab39acf2556c25942bd849fa2c3f8cbb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4840387970224052, guid: ab39acf2556c25942bd849fa2c3f8cbb, type: 3}
       propertyPath: m_RootOrder
@@ -177,6 +185,10 @@ PrefabInstance:
     - target: {fileID: 4840387970224052, guid: ab39acf2556c25942bd849fa2c3f8cbb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20819522333117198, guid: ab39acf2556c25942bd849fa2c3f8cbb, type: 3}
+      propertyPath: far clip plane
+      value: 10000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab39acf2556c25942bd849fa2c3f8cbb, type: 3}

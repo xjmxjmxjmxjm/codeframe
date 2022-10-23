@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fd27f9d2ba98f4d80ed9ad8f611cf8, type: 3}
   m_Name: ABConfig
   m_EditorClassIdentifier: 
-  m_AllPrefabPath: []
+  m_AllPrefabPath:
+  - Assets/GameData/Prefabs/UGUI
   m_AllFileDirAB: []

@@ -11,7 +11,7 @@ public class BuildApp
 	private static string m_IOSPath = Application.dataPath + "/../BuildTarget/IOS/";
 	private static string m_WindowsPath = Application.dataPath + "/../BuildTarget/Windows/";
 	
-	[MenuItem(("Build/Package/标准包"))]
+	//[MenuItem(("Build/Package/标准包"))]
 	public static void Build()
 	{
 		//打ab包
@@ -55,10 +55,11 @@ public class BuildApp
 		DeleteDir(Application.streamingAssetsPath);
 	}
 
-	[MenuItem("Tools/TEST/测试 Version写入")]
-	public static void TVersion()
+	[MenuItem("Tools/Version写入")]
+	public static void Version()
 	{
 		SaveVersion(PlayerSettings.bundleVersion, PlayerSettings.applicationIdentifier);
+		AssetDatabase.Refresh();
 	}
 	
 	

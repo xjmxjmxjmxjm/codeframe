@@ -18,7 +18,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -55,14 +55,21 @@
     <Compile Include="Assets\Scripts\UITools\ScrollView\LoopListItemModel.cs" />
     <Compile Include="Assets\Scripts\UIFrame\Manager\CameraManager.cs" />
     <Compile Include="Assets\Scripts\UIFrame\UIBase\UIPanel\BottomUI.cs" />
+    <Compile Include="Assets\Scripts\UIFrame\Net\ByteArray.cs" />
     <Compile Include="Assets\Scripts\UIFrame\UI\BasicUI\LoadingUI.cs" />
     <Compile Include="Assets\Scripts\UIFrame\Manager\UILayerManager.cs" />
+    <Compile Include="Assets\Scripts\UIFrame\Net\ProtocolManager.cs" />
     <Compile Include="Assets\Scripts\UIFrame\UI\ItemUI\FruitItemUI.cs" />
     <Compile Include="Assets\Scripts\UIFrame\UIBase\UIPanel\PanelBase.cs" />
+    <Compile Include="Assets\Scripts\UIFrame\Net\GlobalDataManager.cs" />
+    <Compile Include="Assets\Scripts\UITools\Language\LanguageItem.cs" />
     <Compile Include="Assets\Scripts\UIFrame\Panel\BasicPanel\LoadingPanel.cs" />
+    <Compile Include="Assets\Scripts\UIFrame\UI\TipUI\HotFixUI.cs" />
     <Compile Include="Assets\Scripts\ConfigData\MonsterData.cs" />
     <Compile Include="Assets\GameData\Prefabs\FPX\benghuai\AutoRotation.cs" />
+    <Compile Include="Assets\Scripts\UIFrame\Net\ProtocolEnum.cs" />
     <Compile Include="Assets\Scripts\UIFrame\Panel\ItemPanel\FruitItem.cs" />
+    <Compile Include="Assets\Scripts\UIFrame\Net\Proto\MsgBase\MsgBase.cs" />
     <Compile Include="Assets\RealFram\FramePlug\GameStart.cs" />
     <Compile Include="Assets\RealFram\FramePlug\ConfigFrame\ExcelBase.cs" />
     <Compile Include="Assets\Scripts\Manager\GameMapManager.cs" />
@@ -73,24 +80,31 @@
     <Compile Include="Assets\Scripts\UITools\Mask\CircleImage.cs" />
     <Compile Include="Assets\Scripts\UIFrame\UIBase\UIPanel\OverlayTopUI.cs" />
     <Compile Include="Assets\Scripts\Manager\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\UIFrame\Net\SendAndRequest\HeartMsgData\HeartMsg.cs" />
     <Compile Include="Assets\Scripts\UIFrame\Const\SceneStr.cs" />
+    <Compile Include="Assets\Scripts\UIFrame\Net\NetManager.cs" />
     <Compile Include="Assets\Scripts\UITools\ScrollView\LoopListItem.cs" />
+    <Compile Include="Assets\Scripts\UITools\Language\MultiLanguageSystem.cs" />
+    <Compile Include="Assets\Scripts\UIFrame\Net\SendAndRequest\Serect\SerectHandler.cs" />
     <Compile Include="Assets\Scripts\UIFrame\Const\EnumStr.cs" />
     <Compile Include="Assets\Scripts\Module\Debug\LogUtil.cs" />
     <Compile Include="Assets\Scripts\Util\ReflectUtil.cs" />
+    <Compile Include="Assets\Scripts\UITools\Language\Data.cs" />
+    <Compile Include="Assets\Scripts\UIFrame\Net\SendAndRequest\Login\LoginHandler.cs" />
     <Compile Include="Assets\Scripts\UIFrame\UIBase\UIItem\ItemBase.cs" />
     <Compile Include="Assets\RealFram\FramePlug\ConfigFrame\ConfigerManager.cs" />
     <Compile Include="Assets\Scripts\UIFrame\UIBase\UIPanel\TipUI.cs" />
     <Compile Include="Assets\Scripts\UIFrame\Const\ColorDefine.cs" />
+    <Compile Include="Assets\Scripts\UIFrame\Net\ServerEnum.cs" />
     <Compile Include="Assets\Scripts\Util\ExtendUtil.cs" />
     <Compile Include="Assets\Scripts\Util\StringUtil.cs" />
     <Compile Include="Assets\Scripts\UIFrame\UIBase\UIPanel\BasicUI.cs" />
     <Compile Include="Assets\Scripts\UIFrame\UIBase\UIPanel\TopUI.cs" />
     <Compile Include="Assets\Scripts\UIFrame\UIBase\UIPanel\OverlayUI.cs" />
     <None Include="Assets\GameData\Prefabs\FPX\Xray.shader" />
-    <None Include="Assets\Resources\Version.txt" />
     <None Include="Assets\GameData\Prefabs\FPX\Water.shader" />
     <None Include="Assets\GameData\Data\Xml\MonsterData.xml" />
+    <None Include="Assets\Resources\ABMD5.xml" />
     <None Include="Assets\GameData\Prefabs\FPX\Skybox.shader" />
     <None Include="Assets\GameData\Prefabs\FPX\benghuai\cloud.shader" />
     <None Include="Assets\GameData\Prefabs\FPX\benghuai.shader" />
@@ -322,6 +336,9 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>E:/UnityEngine/UnityHub/Cache/2020/Install/2020.3.36f1c1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="ExcelDataReader">
+      <HintPath>E:/UnityEngine/CodeFrame/Assets/Plugins/Excel/ExcelDataReader.dll</HintPath>
+    </Reference>
     <Reference Include="protobuf-net">
       <HintPath>E:/UnityEngine/CodeFrame/Assets/RealFram/FramePlug/Plugins/Protobuf/protobuf-net.dll</HintPath>
     </Reference>
@@ -330,6 +347,9 @@
     </Reference>
     <Reference Include="DOTween">
       <HintPath>E:/UnityEngine/CodeFrame/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet">
+      <HintPath>E:/UnityEngine/CodeFrame/Assets/Plugins/Excel/ExcelDataReader.DataSet.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>E:/UnityEngine/UnityHub/Cache/2020/Install/2020.3.36f1c1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -699,6 +719,9 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>E:/UnityEngine/CodeFrame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>E:/UnityEngine/CodeFrame/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>E:/UnityEngine/CodeFrame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>

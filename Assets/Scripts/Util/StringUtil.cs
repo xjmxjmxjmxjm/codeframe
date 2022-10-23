@@ -1,6 +1,7 @@
 
 
 using System;
+using System.Collections.Generic;
 using System.Text;
 
 namespace Util
@@ -53,10 +54,10 @@ namespace Util
             return _StringBuilder.ToString();
         }
         
-        public static string GetMergeStrAddChar(string[] strLst, string mergeChar = "")
+        public static string GetMergeStrAddChar(List<string> strLst, string mergeChar = "")
         {
             _StringBuilder.Clear();
-            int length = strLst.Length;
+            int length = strLst.Count;
             for (int i = 0; i < length; i++)
             {
                 _StringBuilder.Append(strLst[i]);

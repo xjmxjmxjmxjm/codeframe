@@ -18,7 +18,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -54,13 +54,16 @@
   <ItemGroup>
     <Compile Include="Assets\Editor\AssetPost\AssetPostManager.cs" />
     <Compile Include="Assets\RealFram\Editor\RealFramConfig.cs" />
+    <Compile Include="Assets\Editor\UITools\AutoAddLanguageItem.cs" />
     <Compile Include="Assets\Scripts\Editor\AutoGenerateFrameCode\CodeTemplate.cs" />
+    <Compile Include="Assets\RealFram\Editor\Resource\BundleHotFix.cs" />
     <Compile Include="Assets\Scripts\Editor\AutoGenerateFrameCode\PanelUIData.cs" />
     <Compile Include="Assets\RealFram\Editor\Resource\BuildApp.cs" />
     <Compile Include="Assets\Scripts\Editor\AutoGenerateFrameCode\ToolData.cs" />
     <Compile Include="Assets\RealFram\Editor\Resource\BundleEditor.cs" />
     <Compile Include="Assets\Editor\UITools\CircleImageEditor.cs" />
     <Compile Include="Assets\RealFram\Editor\Resource\ABConfig.cs" />
+    <Compile Include="Assets\Editor\Language\ReadLanguage.cs" />
     <Compile Include="Assets\Scripts\Editor\AutoGenerateFrameCode\ScriptBuildHelp.cs" />
     <Compile Include="Assets\RealFram\Editor\Resource\WindowsFile.cs" />
     <Compile Include="Assets\RealFram\Editor\Config\DataEditor.cs" />
@@ -298,6 +301,9 @@
     <Reference Include="UnityEditor.Graphs">
       <HintPath>E:/UnityEngine/UnityHub/Cache/2020/Install/2020.3.36f1c1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>E:/UnityEngine/UnityHub/Cache/2020/Install/2020.3.36f1c1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Android.Extensions">
       <HintPath>E:/UnityEngine/UnityHub/Cache/2020/Install/2020.3.36f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
@@ -306,6 +312,9 @@
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>E:/UnityEngine/UnityHub/Cache/2020/Install/2020.3.36f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader">
+      <HintPath>E:/UnityEngine/CodeFrame/Assets/Plugins/Excel/ExcelDataReader.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>E:/UnityEngine/CodeFrame/Library/PackageCache/com.unity.collab-proxy@1.15.18/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
@@ -333,6 +342,9 @@
     </Reference>
     <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
       <HintPath>E:/UnityEngine/CodeFrame/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet">
+      <HintPath>E:/UnityEngine/CodeFrame/Assets/Plugins/Excel/ExcelDataReader.DataSet.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>E:/UnityEngine/CodeFrame/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -714,6 +726,9 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>E:/UnityEngine/CodeFrame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>E:/UnityEngine/CodeFrame/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>E:/UnityEngine/CodeFrame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>

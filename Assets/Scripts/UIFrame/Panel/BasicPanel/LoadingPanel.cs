@@ -12,43 +12,6 @@ using Toggle = UnityEngine.UI.Toggle;
 
 public class LoadingPanel:MonoBehaviour
 {
-    private ScrollView _sc;
-    public ScrollView sc
-    {
-        get
-        {
-            if (_sc == null)
-            {
-                _sc = transform.Find("scrov_sc").GetComponent<ScrollView>();
-            }
-            return _sc;
-        }
-    }
-    private Transform _Transsc;
-    public Transform Transsc
-    {
-        get
-        {
-            if (_Transsc == null)
-            {
-                _Transsc = transform.Find("scrov_sc");
-            }
-            return _Transsc;
-        }
-    }
-    private LoopList _LoopListsc;
-    public LoopList LoopListsc
-    {
-        get
-        {
-            if (_LoopListsc == null)
-            {
-                _LoopListsc = transform.Find("scrov_sc").GetOrAddComponent<LoopList>();
-            }
-            return _LoopListsc;
-        }
-    }
-
     private Button _zero;
     public Button zero
     {
@@ -111,6 +74,56 @@ public class LoadingPanel:MonoBehaviour
                 _mul1 = transform.Find("btn_mul1").GetComponent<Button>();
             }
             return _mul1;
+        }
+    }
+
+    private ScrollView _sc;
+    public ScrollView sc
+    {
+        get
+        {
+            if (_sc == null)
+            {
+                _sc = transform.Find("scrov_sc").GetComponent<ScrollView>();
+            }
+            return _sc;
+        }
+    }
+    private Transform _Transsc;
+    public Transform Transsc
+    {
+        get
+        {
+            if (_Transsc == null)
+            {
+                _Transsc = transform.Find("scrov_sc");
+            }
+            return _Transsc;
+        }
+    }
+    private LoopList _LoopListsc;
+    public LoopList LoopListsc
+    {
+        get
+        {
+            if (_LoopListsc == null)
+            {
+                _LoopListsc = transform.Find("scrov_sc").GetOrAddComponent<LoopList>();
+            }
+            return _LoopListsc;
+        }
+    }
+
+    private Button _move;
+    public Button move
+    {
+        get
+        {
+            if (_move == null)
+            {
+                _move = transform.Find("btn_move").GetComponent<Button>();
+            }
+            return _move;
         }
     }
 
